@@ -270,7 +270,7 @@ echo -e "\e[1;32mForwarding Local Port $port With Ngrok\e[0m"
 ngrok http $(cat port) > /dev/null 2>&1 &
 		sleep 10
 url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
-echo -e "\e[1;33mWebsite Folder :: $path\e[0m"
+echo -e "\e[1;33mWebsite Folder :: $(cat path)\e[0m"
 echo -e "\e[1;33mYour Web Link: $url\e[0m"
 echo -e "\e[1;33mIf You Want To Stop Press CTRL + C \e[0m"
 while [ true ];do
