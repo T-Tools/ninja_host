@@ -290,7 +290,7 @@ command -v php || { echo >&2 "Please Install All Requirements";sleep 5;menu; }
 banner
 host=php
 echo -e "\e[1;31mCreating Localhost On Port $(cat port) 
-\e[1;33mWebsite Folder :: $path\e[0m
+\e[1;33mWebsite Folder :: $(cat path)\e[0m
 \e[1;33mIf You Want To Stop Press CTRL + C \e[0m"
 php -S 127.0.0.1:$(cat port) -t $(cat path) > /dev/null 2>&1 & sleep 2
 while [ true ];do
